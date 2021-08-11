@@ -12,6 +12,8 @@ class Hotel(val name: String, val classification: Int, val nbRooms: Int ) {
     var id: Long = 0
     var nbFreeRooms: Int = this.nbRooms
 
+    constructor(): this("", 0, 0)
+
     fun checkIn(nbGuests: Int) {
         if (this.nbFreeRooms >= nbGuests) {
             this.nbFreeRooms -=nbGuests
